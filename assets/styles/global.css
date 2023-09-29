@@ -1,32 +1,27 @@
 * {
     box-sizing: border-box;
-    font-family: 'Outfit';
-
 }
 
 body {
     margin: 0;
+    background-color: var(--color-surface);
 }
 
 :root {
-    --max-page-width: 1184px;
+    --max-page-width: 1440px;
 
-    --color-surface: rgb(255, 255, 255);
+    --color-surface: #0D0A04;
     --color-surface-variant: #E8F2FF;
-    --color-primary: #0098DA;
-    --color-secondary: #A8CF45;
-    --color-secondary-variant: #FC0393;
-    --color-secondary-light: #f9eef8;
-    --color-on-primary: white;
-    --color-on-surface: #113C4E;
-    --color-on-surface-light: #7F7F7F;
+    --color-on-surface: white;
+    --color-on-surface-700: #999;
 
 
-    --big-font-2: 56px;
-    --big-font: 48px;
-    --average-font: 32px;
-    --medium-2-font: 20px;
-    --medium-font: 16px;
+
+    --big-font-2: 70px;
+    --big-font: 55px;
+    --average-font: 40px;
+    --medium-2-font: 30px;
+    --medium-font: 20px;
     --small-font: 14px;
 
     text-rendering: optimizeLegibility;
@@ -37,7 +32,7 @@ body {
 }
 
 .page {
-    margin: 0 calc(max(0px, ((100% - var(--max-page-width)) * 0.5) - var(--page-gap) * 2));
+    margin: 150px calc(max(0px, ((100% - var(--max-page-width)) * 0.5) - var(--page-gap) * 2));
 }
 
 .page>* {
@@ -47,7 +42,7 @@ body {
 
 
 p {
-    color: var(--color-on-surface-light);
+    color: var(--color-on-surface);
     margin: 1em 0;
 }
 
@@ -66,6 +61,7 @@ h3,
 h4,
 h5 {
     color: var(--color-on-surface);
+    font-family: "Hanuman";
 }
 
 p,
@@ -92,6 +88,9 @@ h4 {
 }
 
 
+p, a, span, li{
+    font-family: 'Heebo';
+}
 
 a {
     color: var(--color-on-surface);

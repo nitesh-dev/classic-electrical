@@ -17,11 +17,11 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Outfit",
+          href: "https://fonts.googleapis.com/css?family=Hanuman",
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Work Sans",
+          href: "https://fonts.googleapis.com/css?family=Heebo>",
         },
       ],
     },
