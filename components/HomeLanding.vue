@@ -189,7 +189,7 @@ const effect = {
 
 
 .landing .projects>div {
-    margin-top: 50px;
+    margin-top: 150px;
     display: flex;
     gap: 100px;
     align-items: center;

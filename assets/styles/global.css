@@ -60,13 +60,7 @@ p {
 }
 
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Work Sans';
-    font-weight: 600;
-}
+
 
 h1,
 h2,
@@ -74,7 +68,15 @@ h3,
 h4,
 h5 {
     color: var(--color-on-surface);
-    font-family: "Hanuman";
+    font-family: "Heebo";
+    font-weight: 700;
+}
+
+h1,
+h2
+{
+    font-family: 'Hanuman';
+    font-weight: 700;
 }
 
 p,

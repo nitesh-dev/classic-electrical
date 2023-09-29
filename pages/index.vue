@@ -43,8 +43,157 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
             </div>
         </div>
     </section>
+
+    <section class="products">
+        <div class="page">
+            <h2>Our Products</h2>
+            <div class="card-holder">
+                <div class="card">
+                    <h4>Electrical Control Panel</h4>
+                    <hr class="active">
+                    <p>Required for fully automated plant and also to control the power factor near to unity as well as for
+                        machine controlling and research & development purpose.</p>
+                    <a href="#">
+                        <span>View More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M17.7734 12.5L7.22656 1.95312L11.5104 12.5L7.22656 23.0469L17.7734 12.5Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="card right">
+                    <h4>Transformer</h4>
+                    <hr>
+                    <p>To transfer and distribute the power for different circuits as well as to reduce the losses in power
+                        transmission distribute the power for different circuits as well</p>
+                    <a href="#">
+                        <span>View More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M17.7734 12.5L7.22656 1.95312L11.5104 12.5L7.22656 23.0469L17.7734 12.5Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="card right">
+                    <h4>Load Break Switch (LBS)</h4>
+                    <hr>
+                    <p>Updated version of GOAB. And having compact in size and to break the transformer inlet power from
+                        main incomer and also provide protection in case of faulty condition </p>
+                    <a href="#">
+                        <span>View More</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path d="M17.7734 12.5L7.22656 1.95312L11.5104 12.5L7.22656 23.0469L17.7734 12.5Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="image-holder">
+                <div class="left">
+                    <img class="round" src="../public/images/home/products/Rectangle 15.jpg">
+                    <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
+                </div>
+                <div class="right">
+                    <img class="round" src="../public/images/home/products/Rectangle 16.jpg">
+                    <div class="price">
+                        <div>
+                            <span>Prize</span>
+                            <h4>$2500</h4>
+                        </div>
+                        <WidgetsArrowTextButton><span>Order Now</span></WidgetsArrowTextButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 <style scoped>
+/* -------------------------- our products sections ------------------------- */
+
+
+.products {}
+
+.products h2 {
+    margin-bottom: 0.8em;
+}
+
+.products .card-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.products .card-holder .right>* {
+    margin-left: 80px;
+}
+
+.products .card-holder .right hr {
+    margin-left: 0;
+}
+
+.products .card-holder p {
+    margin-top: 28px;
+    margin-bottom: 20px;
+    color: var(--color-on-surface-700);
+}
+
+.products .card-holder a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.products hr {
+    border: none;
+    border-bottom: 1px solid #444;
+}
+
+.products hr.active {
+    border-bottom: 1px solid #EA560B;
+}
+
+
+.products .image-holder {
+    margin-top: 110px;
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    gap: 8px;
+}
+
+.products .image-holder img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.products .image-holder .left img{
+    margin-bottom: 50px;
+}
+
+.products .image-holder .price{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    margin-right: 0;
+}
+
+.products .price>div>span{
+    color: var(--color-on-surface-700);
+}
+
+.products .price h4{
+    margin: 0;
+}
+
+
+
+
+
+
+
 /* --------------------------- about section ------------------ */
 .about .page .first {
     display: grid;
