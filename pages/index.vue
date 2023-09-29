@@ -143,8 +143,17 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
             <Supporter :isLeft="false"/>
         </div>
     </section>
+
+
+    <!-- <Reviews/> -->
 </template>
+
+
+
 <style scoped>
+
+
+
 /* -------------------------- our services section ------------------------- */
 
 .clients h2{
@@ -163,17 +172,6 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
     color: var(--color-on-surface-700);
     margin-bottom: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
