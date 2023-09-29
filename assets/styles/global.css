@@ -10,7 +10,7 @@ body {
     --max-page-width: 1440px;
 
     --color-surface: #0D0A04;
-    --color-surface-variant: #E8F2FF;
+    --color-surface-variant: #161616;
     --color-on-surface: white;
     --color-on-surface-700: #999;
 
@@ -108,7 +108,7 @@ h4 {
 }
 
 
-p, a, span, li{
+p, a, span, li, input{
     font-family: 'Heebo';
     color: var(--color-on-surface);
     font-size: var(--medium-font);
