@@ -125,17 +125,64 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
                         the communications, the hardware, and the software. These next generation, integrated, intelligent
                         MCCs are current technology. The design streamlines installation, set-up, and changes; delivers
                         real-time monitoring of the MCC and easily integrates into a facility-wide network.</p>
-                        <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
+                    <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
                 </div>
                 <img class="round" src="../public/images/home/Rectangle 17.jpg">
             </div>
+        </div>
+    </section>
+
+
+    <section class="clients">
+        <div class="page">
+            <div class="top">
+                <h2>Our Clients</h2>
+                <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
+            </div>
+            <p>We Value Our Clients and Hope for Longlastling relationship with them.Here are our Some of Clients</p>
+            <Supporter :isLeft="false"/>
         </div>
     </section>
 </template>
 <style scoped>
 /* -------------------------- our services section ------------------------- */
 
-.services {}
+.clients h2{
+    margin: 0;
+}
+
+.clients .top{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clients .page>p{
+    max-width: 530px;
+    color: var(--color-on-surface-700);
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- our services section ------------------------- */
+
 
 .services h2 {
     margin: 0;
@@ -158,39 +205,26 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
     margin: 50px 0;
 }
 
-.services .content h4{
+.services .content h4 {
     margin-bottom: 0.5em;
 }
 
-.services .content p{
+.services .content p {
     color: var(--color-on-surface-700);
     margin-bottom: 2em;
 }
 
-.services .content{
+.services .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 65px;
 }
 
-.services .content img{
+.services .content img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
