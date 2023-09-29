@@ -104,12 +104,13 @@ const effect = {
 .landing {
     min-height: 1000px;
     position: relative;
-}
-
-.landing .page {
     background-color: transparent;
 }
 
+.landing .page{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .landing .background {
     position: absolute;
@@ -194,7 +195,7 @@ const effect = {
     align-items: center;
     width: max-content;
     margin-left: auto;
-    border-image: linear-gradient(#3E3E3E00, #6D6D6D87, #46464600) 30;
+    border-image: linear-gradient(#3E3E3E00, white, #46464600) 20;
     border-width: 1px;
     border-style: solid;
     border-left: none;
