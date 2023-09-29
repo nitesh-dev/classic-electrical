@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Heebo>",
+          href: "https://fonts.googleapis.com/css?family=Heebo",
         },
       ],
     },

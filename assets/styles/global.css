@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    background-color: var(--color-surface);
 }
 
 :root {
@@ -32,7 +31,9 @@ body {
 }
 
 .page {
-    margin: 150px calc(max(0px, ((100% - var(--max-page-width)) * 0.5) - var(--page-gap) * 2));
+    background-color: var(--color-surface);
+    margin: 0 calc(max(0px, ((100% - var(--max-page-width)) * 0.5) - var(--page-gap) * 2));
+    min-height: 200px;
 }
 
 .page>* {
@@ -90,10 +91,11 @@ h4 {
 
 p, a, span, li{
     font-family: 'Heebo';
+    color: var(--color-on-surface);
+    font-size: var(--medium-font);
 }
 
 a {
-    color: var(--color-on-surface);
     text-decoration: none;
 }
 
