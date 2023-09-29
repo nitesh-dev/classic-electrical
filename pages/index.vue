@@ -107,8 +107,98 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
             </div>
         </div>
     </section>
+
+    <section class="services">
+        <div class="page">
+            <div class="top">
+                <h2>Our Service</h2>
+                <div>
+                    <h4>Panel Service</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="content">
+                <div>
+                    <h4>Intelligent Motor Control Centers (iMCC)</h4>
+                    <p>The network communication challenges revealed a need to integrate the three major system components:
+                        the communications, the hardware, and the software. These next generation, integrated, intelligent
+                        MCCs are current technology. The design streamlines installation, set-up, and changes; delivers
+                        real-time monitoring of the MCC and easily integrates into a facility-wide network.</p>
+                        <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
+                </div>
+                <img class="round" src="../public/images/home/Rectangle 17.jpg">
+            </div>
+        </div>
+    </section>
 </template>
 <style scoped>
+/* -------------------------- our services section ------------------------- */
+
+.services {}
+
+.services h2 {
+    margin: 0;
+}
+
+.services .page>.top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.services .page>.top h4 {
+    margin: 0;
+}
+
+.services .page>.top p {
+    color: var(--color-on-surface-700);
+}
+
+.services hr {
+    margin: 50px 0;
+}
+
+.services .content h4{
+    margin-bottom: 0.5em;
+}
+
+.services .content p{
+    color: var(--color-on-surface-700);
+    margin-bottom: 2em;
+}
+
+.services .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+}
+
+.services .content img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------------------------- our products sections ------------------------- */
 
 
@@ -167,11 +257,11 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
     object-fit: cover;
 }
 
-.products .image-holder .left img{
+.products .image-holder .left img {
     margin-bottom: 50px;
 }
 
-.products .image-holder .price{
+.products .image-holder .price {
     display: grid;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
@@ -180,11 +270,11 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
     margin-right: 0;
 }
 
-.products .price>div>span{
+.products .price>div>span {
     color: var(--color-on-surface-700);
 }
 
-.products .price h4{
+.products .price h4 {
     margin: 0;
 }
 
