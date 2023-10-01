@@ -11,28 +11,35 @@ const reviews = Array<{
 
 
 reviews.push({
-name: 'Cooper Kenter',
-image: profile,
-message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
-}) 
+    name: 'Cooper Kenter',
+    image: profile,
+    message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
+})
 
 reviews.push({
-name: 'Mira Culhane',
-image: profile,
-message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
-}) 
+    name: 'Mira Culhane',
+    image: profile,
+    message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
+})
 
 reviews.push({
-name: 'Desirae Botosh',
-image: profile,
-message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
-}) 
+    name: 'Desirae Botosh',
+    image: profile,
+    message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
+})
 
 reviews.push({
-name: 'Cooper Kenter',
-image: profile,
-message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
-}) 
+    name: 'Cooper Kenter',
+    image: profile,
+    message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
+})
+
+reviews.push({
+    name: 'Cooper Kenter',
+    image: profile,
+    message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'
+})
+
 
 
 
@@ -41,7 +48,7 @@ message: 'Lorem Ipsum is simply dummy text of the printing and typesetting indus
 
 
 const autoPlay = {
-    delay: 10000,
+    delay: 3000,
     disableOnInteraction: false,
 }
 
@@ -67,27 +74,37 @@ const effect = {
     <section class="reviews">
         <div class="page">
             <h2>Our Reviews</h2>
-            <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" :slides-per-view="3" :loop="true" :spaceBetween="30"
-                :effect="'creative'" :autoplay="autoPlay" :navigation="navigation" :creative-effect="effect">
+            <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" :slides-per-view="3"
+                :centered-slides="true" :loop="true" :spaceBetween="0" :autoplay="autoPlay" :navigation="navigation"
+                :creative-effect="effect">
 
 
                 <SwiperSlide v-for="slide, index in reviews" :key="index">
-                    <!-- <div class="card">
+                    <div class="card">
                         <p>{{ slide.message }}</p>
                         <div class="profile">
                             <img :src="slide.image">
                             <div>
-                                <h4>{{ slide.name }}</h4>
-                                <span>CEO</span>
+                                <span class="name">{{ slide.name }}</span>
+                                <span class="role">CEO</span>
                             </div>
                             <div class="stars">
                                 <img v-for="item in 5" src="../public/images/star.png">
                             </div>
                         </div>
-                    </div> -->
-                    <h1>kjadfj sdflkjsadkfjaksfasj fjsadfkjas dflkajdsfkadf</h1>
+                    </div>
+
                 </SwiperSlide>
             </Swiper>
+
+            <div class="button-holder">
+                <div class="button swiper-button-prev">
+                    <WidgetsArrowButton />
+                </div>
+                <div class="button swiper-button-next">
+                    <WidgetsArrowButton :right="true" />
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -95,19 +112,125 @@ const effect = {
 .reviews h2 {
     text-align: center;
     margin: 0;
+    margin-bottom: 1em;
 }
 
 
-.card{
+
+
+/* change swiper behaviour */
+.reviews .swiper {
+    position: relative;
+}
+
+.reviews .swiper-slide {
+    transform: scale(90%, 90%);
+    transition: all 200ms;
+}
+
+.reviews .swiper-slide-active {
+    transform: scale(100%, 100%) !important;
+}
+
+
+.reviews .swiper::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 10;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-surface))
+}
+
+.reviews .swiper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 10;
+    background-image: linear-gradient(to right, var(--color-surface), rgba(0, 0, 0, 0))
+}
+
+
+.button-holder {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    width: unset;
+    height: unset;
+    margin: unset;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: '';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
     padding: 30px;
     border-radius: 15px;
     border: 1px solid #515151;
 }
 
 
-.card .profile{
+.card .profile {
     display: grid;
     grid-template-columns: max-content max-content 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
 
+.card p {
+    margin: 0;
+}
+
+.card .profile>img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.card .profile span {
+    display: block;
+}
+
+.card span.role {
+    color: var(--color-on-surface-700);
+    font-size: calc(var(--font-medium) - 2px);
+}
+
+.card .stars {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 </style>
