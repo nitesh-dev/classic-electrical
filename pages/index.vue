@@ -346,9 +346,9 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
 
 
 .about .image-holder {
-    margin-top: 110px;
     overflow-x: auto;
     margin: 0;
+    margin-top: 110px;
 }
 
 .about .image-holder div {
