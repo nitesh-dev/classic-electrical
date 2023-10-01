@@ -1,4 +1,7 @@
 <script setup lang='ts'>
+defineProps<{
+    title: string
+}>()
 </script>
 <template>
     <section class="landing">
@@ -18,7 +21,7 @@
             <div class="image-holder">
                 <div>
                     <img src="../public/images/circles.png">
-                    <h4>About Us</h4>
+                    <h4>{{title}}</h4>
                 </div>
             </div>
 

@@ -1,7 +1,8 @@
 <script setup lang='ts'>
 </script>
 <template>
-    <OtherLanding/>
+    <OtherLanding title="About Us"/>
+    
     
     <Reviews/>
     <GetInTouch/>
