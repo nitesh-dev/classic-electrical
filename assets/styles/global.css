@@ -177,12 +177,18 @@ button.primary-outline {
 @media only screen and (max-width: 700px) {
 
     :root {
-        --big-font-2: 32px;
-        --big-font: 48px;
+        --big-font-2: 20px;
+        --big-font: 20px;
         --average-font: 24px;
-        --medium-2-font: 20px;
-        --medium-font: 16px;
+        --medium-2-font: 18px;
+        --medium-font: 10px;
         --small-font: 14px;
+    }
+
+    .page {
+    
+        margin: 40px calc(max(0px, ((100% - var(--max-page-width)) * 0.5) - var(--page-gap) * 2));
+        min-height: max-content;
     }
 
 }
