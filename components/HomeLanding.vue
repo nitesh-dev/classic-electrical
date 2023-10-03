@@ -125,6 +125,10 @@ const effect = {
 .landing .background .image-holder{
     position: relative;
 }
+
+.landing .background .image-holder img{
+    width: 100%;
+}
 .landing .background .grad{
     background: linear-gradient(rgba(0, 0, 0, 0), var(--color-surface));
     position: absolute;

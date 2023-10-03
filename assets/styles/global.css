@@ -32,7 +32,6 @@ body {
 }
 
 
-
 .round{
     border-radius: var(--border-radius);
 }
@@ -40,6 +39,8 @@ body {
 section{
     background-color: var(--color-surface);
     overflow-y: auto;
+    margin: 0;
+    display: block;
 }
 
 .page {

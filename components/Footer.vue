@@ -106,7 +106,8 @@
                     <div class="socials">
 
                         <!-- insta -->
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
                                 <g clip-path="url(#clip0_47_278)">
                                     <path
                                         d="M14.2323 3.33057C13.9914 3.33057 13.7953 3.52663 13.7953 3.76756C13.7953 4.00848 13.9914 4.20455 14.2323 4.20455C14.4733 4.20455 14.6693 4.00852 14.6693 3.76756C14.6693 3.5266 14.4733 3.33057 14.2323 3.33057ZM8.99999 5.12582C6.86383 5.12582 5.12592 6.86373 5.12592 8.9999C5.12592 11.1361 6.86383 12.874 8.99999 12.874C11.1362 12.874 12.8741 11.1361 12.8741 8.99993C12.8741 6.86377 11.1362 5.12582 8.99999 5.12582Z"
@@ -149,7 +150,8 @@
                         </a>
 
                         <!-- telegram -->
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
                                 <path
                                     d="M1.79919 10.8843L6.22669 12.3878L16.7393 5.9611C16.8919 5.86829 17.0479 6.07522 16.9166 6.19622L8.95813 13.5215L8.6625 17.6225C8.65767 17.6912 8.67384 17.7597 8.70886 17.819C8.74388 17.8783 8.7961 17.9256 8.85859 17.9545C8.92109 17.9834 8.9909 17.9927 9.05877 17.981C9.12664 17.9694 9.18937 17.9374 9.23863 17.8892L11.6889 15.4795L16.1686 18.8703C16.6513 19.236 17.3504 18.9782 17.4804 18.387L20.5996 4.22447C20.7776 3.41666 19.9856 2.73466 19.2136 3.03029L1.77719 9.70729C1.22994 9.91698 1.24506 10.6959 1.79919 10.8843Z"
                                     fill="white" />
@@ -274,7 +276,7 @@ footer .address p {
 
 /* copy right */
 
-footer .copyright{
+footer .copyright {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -282,17 +284,18 @@ footer .copyright{
     border-top: 1px solid #272727;
     margin-top: 50px;
 }
-footer .copyright p{
+
+footer .copyright p {
     color: var(--color-on-surface-700);
 }
 
-footer .copyright .socials{
+footer .copyright .socials {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-footer .copyright .socials a{
+footer .copyright .socials a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,4 +305,44 @@ footer .copyright .socials a{
     border-radius: 50%;
 }
 
+
+
+
+
+@media only screen and (max-width: 1300px) {
+    footer .links div {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    footer .bottom {
+        gap: 80px;
+    }
+
+    footer .content {
+        gap: 60px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    footer .bottom {
+        grid-template-columns: 100%;
+    }
+
+    footer .content {
+        grid-template-columns: max-content 1fr;
+    }
+
+    footer .copyright {
+        flex-direction: column;
+    }
+
+    footer .top {
+        grid-template-columns: max-content 1fr;
+        gap: 30px;
+    }
+
+
+}
 </style>
