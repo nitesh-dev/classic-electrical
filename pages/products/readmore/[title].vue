@@ -8,7 +8,7 @@
             <h2>Electrical Control Panel</h2>
             <p>We Value Our Clients and Hope for Longlastling relationship with them.Here are our Some of Clients</p>
             <div class="info">
-                <img class="round" src="../../../public/images/products/Rectangle 1209.jpg">
+                <img class="round" src="../../../public/images/products/Rectangle1209.jpg">
                 <div>
                     <h4>What's in an Electrical Control Panel?</h4>
                     <p>A control panel is a box that contains electrical components required to run a factory machine or

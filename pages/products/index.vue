@@ -82,9 +82,9 @@
 
                 </div>
                 <div class="right">
-                    <img class="round" src="../../public/images/products/Rectangle 1209.jpg">
-                    <img class="round" src="../../public/images/products/Rectangle 1210.jpg">
-                    <img class="round" src="../../public/images/products/Rectangle 1211.jpg">
+                    <img class="round" src="../../public/images/products/Rectangle1209.jpg">
+                    <img class="round" src="../../public/images/products/Rectangle1210.jpg">
+                    <img class="round" src="../../public/images/products/Rectangle1211.jpg">
                 </div>
             </div>
         </div>
