@@ -537,6 +537,7 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
         display: flex;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 24px;
     }
 
 

@@ -24,7 +24,7 @@ defineProps<{
     <div class="supporter">
         <hr>
         <div class="scroll">
-            <div :class="{'animationLeft': isLeft, 'animationRight': !isLeft}">
+            <div :class="{ 'animationLeft': isLeft, 'animationRight': !isLeft }">
                 <img v-for="item in brands" :src="item">
             </div>
         </div>
@@ -32,13 +32,12 @@ defineProps<{
     </div>
 </template>
 <style scoped>
-
-.supporter{
+.supporter {
     position: relative;
 }
 
 
-.supporter::after{
+.supporter::after {
     content: "";
     position: absolute;
     right: 0;
@@ -46,10 +45,10 @@ defineProps<{
     bottom: 0;
     width: 300px;
     z-index: 10;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) , var(--color-surface))
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-surface))
 }
 
-.supporter::before{
+.supporter::before {
     content: "";
     position: absolute;
     left: 0;
@@ -60,14 +59,14 @@ defineProps<{
     background-image: linear-gradient(to right, var(--color-surface), rgba(0, 0, 0, 0))
 }
 
-.supporter .scroll{
+.supporter .scroll {
     margin: 50px 0;
     position: relative;
     overflow: hidden;
     height: 90px;
 }
 
-.supporter .scroll div{
+.supporter .scroll div {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -77,14 +76,14 @@ defineProps<{
 }
 
 
-.supporter .scroll div.animationRight{
+.supporter .scroll div.animationRight {
     animation-name: rightAnim;
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-.supporter .scroll div.animationLeft{
+.supporter .scroll div.animationLeft {
     animation-name: leftAnim;
     animation-duration: 60s;
     animation-iteration-count: infinite;
@@ -93,25 +92,31 @@ defineProps<{
 
 
 @keyframes leftAnim {
-  0%{
-    left: 0;
-  }
+    0% {
+        left: 0;
+    }
 
-  100%{
-    left: -200%;
-  }
+    100% {
+        left: -200%;
+    }
 }
 
 @keyframes rightAnim {
-  0%{
-    left: -200%;
-  }
+    0% {
+        left: -200%;
+    }
 
-  100%{
-   left: 0%;
-  }
+    100% {
+        left: 0%;
+    }
 }
 
 
 
+@media only screen and (max-width: 700px) {
+    .supporter .scroll {
+        margin: 30px 0;
+    }
+
+}
 </style>
