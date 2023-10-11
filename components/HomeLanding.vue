@@ -52,12 +52,12 @@ const effect = {
                 <img class="logo desktop" src="../public/images/logo.png" alt="logo">
                 <div class="list desktop">
                     <NuxtLink class="active" to="/">Home</NuxtLink>
-                    <NuxtLink to="/">About Us</NuxtLink>
-                    <NuxtLink to="/">Products</NuxtLink>
-                    <NuxtLink to="/">Clients</NuxtLink>
-                    <NuxtLink to="/">Services</NuxtLink>
-                    <NuxtLink to="/">Reviews</NuxtLink>
-                    <NuxtLink to="/">Contact Us</NuxtLink>
+                    <NuxtLink to="/about-us">About Us</NuxtLink>
+                    <NuxtLink to="/products">Products</NuxtLink>
+                    <NuxtLink to="/clients">Clients</NuxtLink>
+                    <NuxtLink to="/services">Services</NuxtLink>
+                    <NuxtLink to="/reviews">Reviews</NuxtLink>
+                    <NuxtLink to="/contact-us">Contact Us</NuxtLink>
                 </div>
 
                 <h1>Electrical Products</h1>
