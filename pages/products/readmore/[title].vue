@@ -30,10 +30,10 @@
             </div>
 
             <p>The control panel also goes by the name of PLC panel, with PLC short for programmable logic
-                        controller. This means the PLC is basically an industrial-grade computer, and that high voltage and
-                        high stakes are at play with many of these components.</p>
-                    <p>No two applications and environments are identical, but here's what you can expect to see in an
-                        electrical control panel.</p>
+                controller. This means the PLC is basically an industrial-grade computer, and that high voltage and
+                high stakes are at play with many of these components.</p>
+            <p>No two applications and environments are identical, but here's what you can expect to see in an
+                electrical control panel.</p>
 
         </div>
     </section>
@@ -41,13 +41,12 @@
     <Footer></Footer>
 </template>
 <style scoped>
-
-.products h2{
+.products h2 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.products p{
+.products p {
     color: var(--color-on-surface-700);
 }
 
@@ -61,29 +60,36 @@
 }
 
 
-.products h4{
+.products h4 {
     margin: 0;
 }
 
-.products img{
+.products img {
     width: 100%;
 }
 
 
-.products .list p{
+.products .list p {
     margin: 8px 0;
     display: flex;
     gap: 10px;
 }
 
-.products .list p::before{
+.products .list p::before {
     content: url('../../../public/images/arrow-gray.png');
     margin-top: 4px;
 }
 
-.products .info>div>p{
+.products .info>div>p {
     color: var(--color-on-surface);
 
 }
 
+
+
+@media only screen and (max-width: 1000px) {
+    .products .info {
+        grid-template-columns: 100%;
+    }
+}
 </style>
