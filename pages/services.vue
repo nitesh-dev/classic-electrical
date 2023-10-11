@@ -287,5 +287,9 @@ function changeTab(index: number) {
     .services .card.reverse{
         flex-direction: column-reverse;
     }
+
+    .services .tabs h4 {
+    font-size: calc(var(--medium-2-font) - 2px);
+}
 }
 </style>
