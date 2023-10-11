@@ -343,6 +343,9 @@ footer .copyright .socials a {
         gap: 30px;
     }
 
+    footer .top img{
+        width: 120px;
+    }
 
 }
 </style>
