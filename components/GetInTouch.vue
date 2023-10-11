@@ -136,4 +136,18 @@
     color: var(--color-on-surface-700);
     margin-top: 0.5em;
 }
+
+
+
+@media only screen and (max-width: 800px) {
+    .touch .form-holder {
+        margin-top: 24px;
+        grid-template-columns: 100%;
+    }
+
+    .touch .page {
+        padding: 60px 24px;
+        background-color: var(--color-surface-variant);
+    }
+}
 </style>
