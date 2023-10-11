@@ -19,7 +19,7 @@ function changeTab(index: number) {
                 <div v-if="activeTabIndex == 0" class="first">
                     <h2>Panel Services</h2>
 
-                    <div class="card">
+                    <div class="card reverse">
                         <img class="round" src="../public/images/services/Rectangle 1218.jpg">
                         <div>
                             <h4>Intelligent Motor Control Centers (Imcc)</h4>
@@ -46,7 +46,7 @@ function changeTab(index: number) {
                         <img class="round" src="../public/images/services/Rectangle 1221.jpg">
                     </div>
 
-                    <div class="card">
+                    <div class="card reverse">
                         <img class="round" src="../public/images/services/Rectangle 1222.jpg">
                         <div>
                             <h4>PCC Power Control Centers)</h4>
@@ -72,7 +72,7 @@ function changeTab(index: number) {
                         <img class="round" src="../public/images/services/Rectangle 1223.jpg">
                     </div>
 
-                    <div class="card">
+                    <div class="card reverse">
                         <img class="round" src="../public/images/services/Rectangle 1224.jpg">
                         <div>
                             <h4>Automatic Power Factor Improvement systems</h4>
@@ -96,7 +96,7 @@ function changeTab(index: number) {
                         <img class="round" src="../public/images/services/Rectangle 1225.jpg">
                     </div>
 
-                    <div class="card">
+                    <div class="card reverse">
                         <img class="round" src="../public/images/services/Rectangle 1226.jpg">
                         <div>
                             <h4>Flame Proof Panel</h4>
@@ -271,4 +271,21 @@ function changeTab(index: number) {
     content: url('../public/images/arrow-gray.png');
     margin-top: 4px;
     margin-right: 10px;
-}</style>
+}
+
+
+@media only screen and (max-width: 700px) {
+    .services .card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .services .card.reverse{
+        flex-direction: column-reverse;
+    }
+}
+</style>
