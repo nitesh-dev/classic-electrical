@@ -24,7 +24,7 @@
         </div>
     </section>
 
-    <GetInTouch/>
+    <GetInTouch />
     <Footer></Footer>
 </template>
 <style scoped>
@@ -82,5 +82,21 @@
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .reviews .page>div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .reviews .page>div {
+        grid-template-columns: 100%;
+
+    }
 }
 </style>
