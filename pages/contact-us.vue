@@ -74,7 +74,9 @@
 
             </div>
 
-            <img src="../public/images/map.png">
+            <div class="img-holder">
+                <img src="../public/images/map.png">
+            </div>
 
         </div>
     </section>
@@ -110,7 +112,6 @@ form textarea {
     width: 100%;
     outline: none;
     border: none;
-    margin-bottom: 24px;
     border-radius: 5px;
     border: 1px solid #232323;
     margin-bottom: 30px;
@@ -151,14 +152,14 @@ form button {
 
 /* info */
 
-.info{
+.info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 80px;
     gap: 20px;
 }
 
-.info>div{
+.info>div {
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 20px;
@@ -184,8 +185,45 @@ form button {
 }
 
 
-.contact .page>img{
+.contact .img-holder img {
+    display: block;
     width: 100%;
+    margin: 0;
     margin-top: 150px;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .info {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .contact .page>p {
+    max-width: unset;
+    margin: 1em var(--page-gap);
+}
+    .info {
+        grid-template-columns: 100%;
+        margin-top: 80px;
+    }
+
+    .contact .img-holder img {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    form {
+    padding: 50px 12px;
+}
 }
 </style>
