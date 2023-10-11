@@ -39,7 +39,7 @@
                     with prompt service availability by our excellent team</p>
             </div>
 
-            <div class="content">
+            <div class="content top">
                 <img class="round" src="../public/images/about/Rectangle 1215.jpg">
                 <div>
                     <h2>Our Vision</h2>
@@ -113,13 +113,13 @@
     top: 4px;
 }
 
-.about .list{
+.about .list {
     margin-bottom: 100px;
 }
 
 
 
-.about .content{
+.about .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -127,19 +127,45 @@
     margin-bottom: 80px;
 }
 
-.about .content img{
+.about .content img {
     width: 100%;
 }
 
-.about .content h2{
+.about .content h2 {
     margin-top: 0;
     margin-bottom: 20px;
     font-family: 'Heebo';
 }
 
-.about .content p{
+.about .content p {
     margin: 0;
     margin-bottom: 8px;
     color: var(--color-on-surface-700);
+}
+
+
+
+@media only screen and (max-width: 700px) {
+
+    .about .image-holder {
+
+        gap: 10px;
+
+    }
+
+    .about .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .about .content * {
+        text-align: center;
+    }
+
+    .about .content.top {
+        flex-direction: column-reverse;
+    }
 }
 </style>

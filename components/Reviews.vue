@@ -46,7 +46,7 @@ reviews.push({
 
 
 
-function onResize(event: any) {
+function onResize() {
     console.log(window.innerWidth)
     if (window.innerWidth > 1100) {
         if (slideCount.value != 3) slideCount.value = 3
@@ -56,6 +56,7 @@ function onResize(event: any) {
 }
 
 onMounted(function () {
+    onResize()
     window.addEventListener('resize', onResize);
 })
 

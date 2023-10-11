@@ -21,7 +21,7 @@ defineProps<{
             <div class="image-holder">
                 <div>
                     <img src="../public/images/circles.png">
-                    <h4>{{title}}</h4>
+                    <h4>{{ title }}</h4>
                 </div>
             </div>
 
@@ -42,14 +42,14 @@ defineProps<{
     height: 100%;
 }
 
-.landing .image-holder div{
+.landing .image-holder div {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.landing .image-holder h4{
+.landing .image-holder h4 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,5 +91,17 @@ defineProps<{
     justify-content: center;
     background-color: #1E1E1E;
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+    .landing .page {
+        margin-top: 15px;
+        min-height: 300px;
+    }
+
+    .nav img {
+    width: 50px;
+    height: 50px;
+}
 }
 </style>
