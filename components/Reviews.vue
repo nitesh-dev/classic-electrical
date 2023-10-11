@@ -2,6 +2,7 @@
 
 import profile from '../public/images/profile.jpg'
 
+const slideCount = ref(3)
 
 const reviews = Array<{
     name: string,
@@ -45,6 +46,25 @@ reviews.push({
 
 
 
+function onResize(event: any) {
+    console.log(window.innerWidth)
+    if (window.innerWidth > 1100) {
+        if (slideCount.value != 3) slideCount.value = 3
+    } else {
+        if (slideCount.value != 1) slideCount.value = 1
+    }
+}
+
+onMounted(function () {
+    window.addEventListener('resize', onResize);
+})
+
+
+onUnmounted(function () {
+    window.removeEventListener('resize', onResize)
+})
+
+
 
 
 const autoPlay = {
@@ -74,7 +94,7 @@ const effect = {
     <section class="reviews">
         <div class="page">
             <h2>Our Reviews</h2>
-            <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" :slides-per-view="3"
+            <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" :slides-per-view="slideCount"
                 :centered-slides="true" :loop="true" :spaceBetween="0" :autoplay="autoPlay" :navigation="navigation"
                 :creative-effect="effect">
 
@@ -232,5 +252,20 @@ const effect = {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+    .card {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .reviews .swiper::before, .reviews .swiper::after{
+        content: none;
+    }
 }
 </style>
