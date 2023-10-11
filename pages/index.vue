@@ -140,38 +140,35 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
                 <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
             </div>
             <p>We Value Our Clients and Hope for Longlastling relationship with them.Here are our Some of Clients</p>
-            <Supporter :isLeft="false"/>
+            <Supporter :isLeft="false" />
         </div>
     </section>
 
 
-    <Reviews/>
-    <GetInTouch/>
+    <Reviews />
+    <GetInTouch />
 
-    <FAQ/>
+    <FAQ />
     <Footer></Footer>
 </template>
 
 
 
 <style scoped>
-
-
-
 /* -------------------------- our services section ------------------------- */
 
-.clients h2{
+.clients h2 {
     margin: 0;
 }
 
-.clients .top{
+.clients .top {
     display: grid;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
     align-items: center;
 }
 
-.clients .page>p{
+.clients .page>p {
     max-width: 530px;
     color: var(--color-on-surface-700);
     margin-bottom: 50px;
@@ -363,5 +360,37 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
     width: 227px;
     height: 300px;
     object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1100px) {
+    .about .page .first {
+        gap: 24px;
+        grid-template-columns: 100%;
+    }
+
+    .about .page .first * {
+        text-align: center;
+    }
+
+    .about .left p {
+        max-width: unset;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+
+    .about .left button{
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
 }
 </style>

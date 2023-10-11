@@ -174,15 +174,15 @@ button.primary-outline {
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
 
     :root {
-        --big-font-2: 20px;
-        --big-font: 20px;
-        --average-font: 24px;
-        --medium-2-font: 18px;
-        --medium-font: 10px;
-        --small-font: 14px;
+        --big-font-2: 50px;
+        --big-font: 35px;
+        --average-font: 30px;
+        --medium-2-font: 20px;
+        --medium-font: 14px;
+        --small-font: 12px;
     }
 
     .page {
@@ -194,7 +194,7 @@ button.primary-outline {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     :root {
         --page-gap: 16px
     }
