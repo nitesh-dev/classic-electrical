@@ -18,8 +18,8 @@
                     luctus porta mollis. Sed lobortis ex sed nisl vestibulum pellentesque.</p>
             </div>
 
-            <Supporter :isLeft="false"/>
-            <Supporter :isLeft="true"/>
+            <Supporter :isLeft="false" />
+            <Supporter :isLeft="true" />
         </div>
     </section>
 
@@ -49,46 +49,43 @@
     <Footer></Footer>
 </template>
 <style scoped>
-
-
 /* ------------------------------------ product section --------------------- */
 
 
-.products{
-
-}
+.products {}
 
 
-.products .page{
+.products .page {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: end;
 }
 
 
-.products h2{
+.products h2 {
     margin-bottom: 0;
 }
 
-.products p{
+.products p {
     color: var(--color-on-surface-700);
     margin-bottom: 2em;
 }
 
-.products hr{
+.products hr {
     width: calc(100% + 80px);
     margin: 0;
     margin-bottom: 4px;
 }
 
 
-.products .right{
+.products .right {
     display: flex;
     gap: 30px;
     align-items: end;
     overflow-x: auto;
 }
-.products img{
+
+.products img {
     width: 290px;
     height: auto;
 }
@@ -104,13 +101,13 @@
 
 
 /* ---------------------------------- about section ----------------------------- */
-.about h2{
+.about h2 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
 
-.about .page .col{
+.about .page .col {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -119,19 +116,45 @@
     margin-bottom: 80px;
 }
 
-.about .col p{
+.about .col p {
     line-height: 34px;
 }
 
-.about .page>p{
+.about .page>p {
     color: var(--color-on-surface-700);
 }
 
-.about .col img{
+.about .col img {
     width: 100%;
 }
 
 
 
 
+@media only screen and (max-width: 900px) {
+    .about .page .col {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .products hr {
+        display: none;
+    }
+
+    .products .page {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .products .right {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .products img {
+        width: 178px;
+        height: auto;
+        object-fit: cover;
+    }
+}
 </style>
