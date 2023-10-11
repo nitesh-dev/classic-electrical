@@ -92,12 +92,12 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
             <div class="image-holder">
                 <div class="left">
                     <img class="round" src="../public/images/home/products/Rectangle 15.jpg">
-                    <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
+                    <WidgetsArrowTextButton class="desktop"><span>View More</span></WidgetsArrowTextButton>
                 </div>
                 <div class="right">
                     <img class="round" src="../public/images/home/products/Rectangle 16.jpg">
                     <div class="price">
-                        <div>
+                        <div class="price-div">
                             <span>Prize</span>
                             <h4>$2500</h4>
                         </div>
@@ -105,6 +105,8 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
                     </div>
                 </div>
             </div>
+
+            <WidgetsArrowTextButton class="phone"><span>View More</span></WidgetsArrowTextButton>
         </div>
     </section>
 
@@ -137,10 +139,11 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
         <div class="page">
             <div class="top">
                 <h2>Our Clients</h2>
-                <WidgetsArrowTextButton><span>View More</span></WidgetsArrowTextButton>
+                <WidgetsArrowTextButton class="desktop"><span>View More</span></WidgetsArrowTextButton>
             </div>
             <p>We Value Our Clients and Hope for Longlastling relationship with them.Here are our Some of Clients</p>
             <Supporter :isLeft="false" />
+            <WidgetsArrowTextButton class="phone"><span>View More</span></WidgetsArrowTextButton>
         </div>
     </section>
 
@@ -155,6 +158,12 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
 
 
 <style scoped>
+.desktop {}
+
+.phone {
+    display: none;
+}
+
 /* -------------------------- our services section ------------------------- */
 
 .clients h2 {
@@ -234,8 +243,6 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
 
 /* -------------------------- our products sections ------------------------- */
 
-
-.products {}
 
 .products h2 {
     margin-bottom: 0.8em;
@@ -382,15 +389,160 @@ const aboutImages = [about1, about2, about3, about4, about5, about6, about7, abo
 
     .about .left p {
         max-width: unset;
-        margin-top: 0;
-        margin-bottom: 50px;
     }
 
-
-    .about .left button{
+    .about .left button {
         margin: auto;
         margin-bottom: 2rem;
     }
 
+
+
+
+    .products .card-holder {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .products .card-holder .right>* {
+        margin-left: 0;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .phone {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .products .image-holder {
+        margin-top: 110px;
+        grid-template-columns: 2.1fr 0.8fr;
+
+    }
+
+    .products .image-holder .left img {
+        margin-bottom: 50px;
+    }
+
+    .products .image-holder .price {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-right: 0;
+    }
+
+
+    .products .price-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .products .image-holder .right button {
+        padding: 6px 8px;
+        width: max-content;
+        margin: auto;
+        margin-top: 12px;
+    }
+
+    .products button.phone {
+        display: flex !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .products .card-holder {
+        grid-template-columns: 100%;
+    }
+
+    .products .card {
+        position: relative;
+    }
+
+    .products .card hr {
+        display: none;
+    }
+
+    .products h4 {
+        margin-bottom: 0;
+    }
+
+    .products p {
+        margin-top: 0.5em !important;
+    }
+
+
+
+
+
+
+    .services * {
+        text-align: center;
+    }
+
+    .services h2 {
+        margin-bottom: 0.5em;
+    }
+
+    .services .page>.top {
+        grid-template-columns: 100%;
+    }
+
+    .services .content {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .services hr {
+        display: none;
+    }
+
+    .services button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+
+
+    .clients *{
+        text-align: center;
+    }
+    .clients h2 {
+        margin: 0;
+    }
+
+    .clients .top {
+        grid-template-columns: 100%;
+    }
+
+    .clients button.phone{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .clients .page>p {
+        max-width: unset;
+        margin-bottom: 50px;
+    }
 }
 </style>
