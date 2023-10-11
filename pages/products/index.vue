@@ -20,7 +20,8 @@
 
                     <div class="content">
                         <h4>Transformer</h4>
-                        <p>To transfer and distribute the power for different circuits as well as to reduce the losses in power transmission.</p>
+                        <p>To transfer and distribute the power for different circuits as well as to reduce the losses in
+                            power transmission.</p>
                         <NuxtLink to="/products/readmore/Transformer">
                             View More
                             <img src="../../public/images/arrow.png">
@@ -29,7 +30,9 @@
 
                     <div class="content">
                         <h4>Load Break Switch (LBS)</h4>
-                        <p>Updated version of GOAB. And having compact in size and to break the transformer inlet power from main incomer and also provide protection in case of faulty condition with emergency indication.</p>
+                        <p>Updated version of GOAB. And having compact in size and to break the transformer inlet power from
+                            main incomer and also provide protection in case of faulty condition with emergency indication.
+                        </p>
                         <NuxtLink to="/products/readmore/Transformer">
                             View More
                             <img src="../../public/images/arrow.png">
@@ -38,7 +41,8 @@
 
                     <div class="content">
                         <h4>Gang Operated Air-break Switch</h4>
-                        <p>used to break the transformer inlet power from main incomer and also provide protection in case of faulty condition</p>
+                        <p>used to break the transformer inlet power from main incomer and also provide protection in case
+                            of faulty condition</p>
                         <NuxtLink to="/products/readmore/Transformer">
                             View More
                             <img src="../../public/images/arrow.png">
@@ -47,7 +51,8 @@
 
                     <div class="content">
                         <h4>All types of Earthing</h4>
-                        <p>Earthing is used to protect the human being from leakage current in the machines or any conductive places.</p>
+                        <p>Earthing is used to protect the human being from leakage current in the machines or any
+                            conductive places.</p>
                         <NuxtLink to="/products/readmore/Transformer">
                             View More
                             <img src="../../public/images/arrow.png">
@@ -56,7 +61,9 @@
 
                     <div class="content">
                         <h4>Power Cables</h4>
-                        <p>A power cable is an electrical cable, an assembly of one or more electrical conductors, usually held together with an overall sheath. The assembly is used for transmission of electrical power.</p>
+                        <p>A power cable is an electrical cable, an assembly of one or more electrical conductors, usually
+                            held together with an overall sheath. The assembly is used for transmission of electrical power.
+                        </p>
                         <NuxtLink to="/products/readmore/Transformer">
                             View More
                             <img src="../../public/images/arrow.png">
@@ -65,7 +72,8 @@
 
                     <div class="content">
                         <h4>Vaccum Circuit Breakers</h4>
-                        <p>Provide the breaking in case of faulty condition and also reduce the spark in case of humidity.</p>
+                        <p>Provide the breaking in case of faulty condition and also reduce the spark in case of humidity.
+                        </p>
                         <NuxtLink to="/products/readmore/Transformer">
                             View More
                             <img src="../../public/images/arrow.png">
@@ -86,36 +94,33 @@
     <Footer></Footer>
 </template>
 <style scoped>
-
-
-
-.products .page>div{
+.products .page>div {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 100px;
 }
 
-.products .right{
+.products .right {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
 }
 
-.products .right img{
+.products .right img {
     width: 100%;
 }
 
 
 
-.products .left{
+.products .left {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
 
-.products .left::before{
+.products .left::before {
     content: "";
     border-left: 1px solid #444444;
     position: absolute;
@@ -125,16 +130,16 @@
 }
 
 
-.products .content.active{
+.products .content.active {
     border-left: 1px solid #EA560B;
 }
 
-.products .content{
+.products .content {
     position: relative;
     padding-left: 50px;
 }
 
-.products .content::before{
+.products .content::before {
     content: "";
     border-left: 1px solid transparent;
     position: absolute;
@@ -145,16 +150,16 @@
 }
 
 
-.products .content h4{
+.products .content h4 {
     margin: 0;
 }
 
-.products .content p{
+.products .content p {
     color: var(--color-on-surface-700);
     margin: 0.5em 0;
 }
 
-.products .content a{
+.products .content a {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -162,4 +167,32 @@
 }
 
 
+
+
+
+@media only screen and (max-width: 700px) {
+    .products .page>div {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 24px;
+    }
+
+    .products .left::before {
+        content: none;
+
+    }
+
+    .products .content.active {
+        border-left: none;
+
+
+    }
+
+    .products .content {
+        padding-left: 0px;
+    }
+
+
+
+}
 </style>
